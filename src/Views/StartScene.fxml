@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="menuBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1449.0" stylesheets="@../Resources/menuStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StartSceneController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="314.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="true" prefHeight="214.0" prefWidth="716.0" text="Airplanes" textAlignment="CENTER" textFill="#fffafa">
+         <font>
+            <Font name="Levenim MT" size="150.0" />
+         </font>
+      </Label>
+      <Button fx:id="startButton" layoutX="465.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#handleStartClick" prefHeight="102.0" prefWidth="401.0" stylesheets="@../Resources/buttonStyle.css" text="Start Game" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="48.0" />
+         </font></Button>
+      <Button fx:id="exitButton" layoutX="575.0" layoutY="495.0" mnemonicParsing="false" onMouseClicked="#handleExitClick" prefHeight="78.0" prefWidth="195.0" stylesheets="@../Resources/buttonStyle.css" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="settingsButton" layoutX="504.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#handleSesttingsClick" prefHeight="102.0" prefWidth="337.0" stylesheets="@../Resources/buttonStyle.css" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="48.0" />
+         </font></Button>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

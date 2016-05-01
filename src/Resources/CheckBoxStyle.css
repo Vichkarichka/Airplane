@@ -1,0 +1,5 @@
+.check-box>.box {
+  -fx-background-insets: 0;
+  -fx-background-radius: 0;
+  -fx-background-image: url("map.jpg");
+}

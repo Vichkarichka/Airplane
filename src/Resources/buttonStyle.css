@@ -1,0 +1,18 @@
+#startButton{
+    -fx-background-color: transparent;
+}
+
+#settingsButton{
+     -fx-background-color: transparent;
+ }
+ #exitButton{
+     -fx-background-color: transparent;
+ }
+
+  #ContinueButton{
+      -fx-background-color: transparent;
+  }
+
+  #BackButton{
+        -fx-background-color: transparent;
+    }

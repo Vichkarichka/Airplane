@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="settingsBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1499.0" stylesheets="@../Resources/SettingsStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GameController">
+   <children>
+      <Button fx:id="BackButton" alignment="CENTER" layoutX="571.0" layoutY="600.0" mnemonicParsing="false" onMouseClicked="#handleBackButtonClick" prefHeight="99.0" prefWidth="242.0" stylesheets="@../Resources/buttonStyle.css" text="Back" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="48.0" />
+         </font>
+      </Button>
+      <Slider fx:id="difficultySlider" layoutX="924.0" layoutY="358.0" majorTickUnit="100.0" max="850.0" min="100.0" orientation="VERTICAL" value="400.0" />
+      <Label layoutX="938.0" layoutY="347.0" prefHeight="22.0" prefWidth="59.0" text="MAX" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="938.0" layoutY="487.0" prefHeight="22.0" prefWidth="59.0" text="MIN" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font>
+      </Label>
+      <CheckBox id="box" fx:id="box" layoutX="370.0" layoutY="277.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="136.0" stylesheets="@../Resources/CheckBoxStyle.css" text="Music" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="370.0" layoutY="339.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="175.0" stylesheets="@../Resources/CheckBoxStyle.css" text="FullScreen" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

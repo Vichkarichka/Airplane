@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_airplane" default="compile.module.airplane">
+  <dirname property="module.airplane.basedir" file="${ant.file.module_airplane}"/>
+  
+  <property name="module.jdk.home.airplane" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.airplane" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.airplane" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.airplane" value="-encoding UTF-8 -source 8 ${compiler.args}"/>
+  
+  <property name="airplane.output.dir" value="${module.airplane.basedir}/out/production/Airplane"/>
+  <property name="airplane.testoutput.dir" value="${module.airplane.basedir}/out/test/Airplane"/>
+  
+  <path id="airplane.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="airplane.module.production.classpath">
+    <path refid="${module.jdk.classpath.airplane}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="airplane.runtime.production.module.classpath">
+    <pathelement location="${airplane.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="airplane.module.classpath">
+    <path refid="${module.jdk.classpath.airplane}"/>
+    <pathelement location="${airplane.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="airplane.runtime.module.classpath">
+    <pathelement location="${airplane.testoutput.dir}"/>
+    <pathelement location="${airplane.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.airplane">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.airplane">
+    <patternset refid="excluded.from.module.airplane"/>
+  </patternset>
+  
+  <path id="airplane.module.sourcepath">
+    <dirset dir="${module.airplane.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.airplane" depends="compile.module.airplane.production,compile.module.airplane.tests" description="Compile module Airplane"/>
+  
+  <target name="compile.module.airplane.production" depends="register.custom.compilers" description="Compile module Airplane; production classes">
+    <mkdir dir="${airplane.output.dir}"/>
+    <javac2 destdir="${airplane.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.airplane}/javac">
+      <compilerarg line="${compiler.args.airplane}"/>
+      <bootclasspath refid="airplane.module.bootclasspath"/>
+      <classpath refid="airplane.module.production.classpath"/>
+      <src refid="airplane.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.airplane"/>
+    </javac2>
+    
+    <copy todir="${airplane.output.dir}">
+      <fileset dir="${module.airplane.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.airplane.tests" depends="register.custom.compilers,compile.module.airplane.production" description="compile module Airplane; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.airplane" description="cleanup module">
+    <delete dir="${airplane.output.dir}"/>
+    <delete dir="${airplane.testoutput.dir}"/>
+  </target>
+</project>

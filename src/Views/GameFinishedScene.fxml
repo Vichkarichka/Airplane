@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="gameBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1499.0" stylesheets="@../Resources/gameStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GameFinishedController">
+   <children>
+      <Button fx:id="ContinueButton" alignment="CENTER" layoutX="413.0" layoutY="445.0" mnemonicParsing="false" onMouseClicked="#handleContinueButtonClick" prefHeight="125.0" prefWidth="516.0" stylesheets="@../Resources/buttonStyle.css" text="Continue" textAlignment="CENTER" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="112.92" radius="57.442499999999995" spread="0.37" width="118.85" />
+         </effect>
+         <font>
+            <Font name="OCR A Extended" size="72.0" />
+         </font></Button>
+      <Label fx:id="gameResultLabel" alignment="CENTER" layoutX="324.0" layoutY="74.0" prefHeight="214.0" prefWidth="704.0" text="WIN" textFill="LIME">
+         <font>
+            <Font name="OCR A Extended" size="200.0" />
+         </font>
+
+      </Label>
+   </children>
+</AnchorPane>
