@@ -36,6 +36,8 @@ public class GameController extends ControllerBase {
     @FXML private Label pointsLabel;
     @FXML private Pane shipSprite;
     @FXML private Label timeLabel;
+    @FXML private Label HP_ship;
+
 
     private Ship ship;
 
@@ -67,6 +69,8 @@ public class GameController extends ControllerBase {
         winTime = 60;
         isReplay = false;
         AIThread = new Thread();
+        HP_ship=new Label();
+
     }
 
     @FXML private void initialize(){
@@ -281,6 +285,8 @@ public class GameController extends ControllerBase {
     }
 
     private void shipMoves() {
+        HP_ship .setText(String.format("HP: %d", collisionDetector.helf_point));
+
         shipSprite.setLayoutX(ship.getPosition().getX() - shipSprite.getPrefWidth()/2);
         shipSprite.setLayoutY(ship.getPosition().getY() - shipSprite.getPrefHeight()/2);
     }

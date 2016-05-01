@@ -26,5 +26,11 @@
             <Font name="OCR A Extended" size="22.0" />
          </font>
       </Label>
+      <Label fx:id="HP_ship" layoutX="800.0" layoutY="12.0" text="HP: " textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+
    </children>
 </AnchorPane>

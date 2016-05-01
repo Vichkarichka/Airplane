@@ -17,6 +17,7 @@ import java.util.ArrayList;
  */
 public class CollisionsDetector {
     private Timeline collisionDetection;
+    public int helf_point=100;
 
     private Group mobs;
     private Group bullets;
@@ -64,18 +65,39 @@ public class CollisionsDetector {
             bullets.getChildren().remove(bullet);
         }
     }
+    private boolean flag=false;
+    private  int damage=0;
 
     private void detectCollisions(ArrayList<Node> toDelBullets, ArrayList<Node> toDelMobs) {
         for (Node mob : mobs.getChildren()) {
             detectMobsBulletsCollision(toDelBullets, toDelMobs, mob);
             detectMobsShipCollisions(mob);
         }
+        if(flag==true)
+        {
+
+            helf_point-=damage;
+            flag=false;
+        }
+
     }
 
     private void detectMobsShipCollisions(Node mob) {
         if(mob.getBoundsInParent().intersects(ship.getBoundsInParent())){
-            System.out.println(String.format("Ship killed"));
-            onMobShipCollision.run();
+
+            damage=(int)(Math.random()*11+10);
+            System.out.println(damage);
+            if(helf_point<=damage)
+            {
+                System.out.println(String.format("Ship killed"));
+                onMobShipCollision.run();
+                //  toDelMobs.add(mob);
+
+
+            }
+            mobs.getChildren().remove(mob);
+            flag=true;
+
         }
     }
 
