@@ -75,8 +75,7 @@ public class GameController extends ControllerBase {
 
     @FXML private void initialize(){
         gameField.setOnKeyPressed(new KeyboardHandler());
-
-                /*
+        /*
          *Sound
          */
         /*String path = "Media\\main_theme.gs";
@@ -304,6 +303,15 @@ public class GameController extends ControllerBase {
     }
 
     private void initBulletMovePath(Vector2 startPosition, Vector2 endPosition, final Circle circle) {
+        /*
+        * Add sound
+        */
+        System.out.println("Go Fire");
+        String path = "src/Resources/Laser.wav";
+        Media sound = new Media(new File(path).toURI().toString());
+        MediaPlayer mp = new MediaPlayer(sound);
+        mp.play();
+
         initMovPath(startPosition, endPosition, circle, 200, bullets);
     }
 

@@ -20,7 +20,8 @@
          <font>
             <Font name="OCR A Extended" size="18.0" />
          </font></Button>
-      <Pane id="ship" fx:id="shipSprite" layoutX="364.0" layoutY="252.0" prefHeight="97.0" prefWidth="73.0" stylesheets="@../Resources/shipStyle.css" />
+      <!--Add centr: Changed layoutX="364.0" layoutY="252.0" -->
+      <Pane id="ship" fx:id="shipSprite" layoutX="590.0" layoutY="351.5" prefHeight="97.0" prefWidth="73.0" stylesheets="@../Resources/shipStyle.css" />
       <Label fx:id="timeLabel" layoutX="342.0" layoutY="12.0" text="Time: " textFill="WHITE">
          <font>
             <Font name="OCR A Extended" size="22.0" />

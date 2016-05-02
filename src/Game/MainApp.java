@@ -6,10 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-
+import javafx.scene.image.Image;
 import java.io.File;
 
-//import javafx.scene.image.Image;
 //import java.net.URL;
 
 
@@ -41,6 +40,8 @@ public class MainApp extends Application {
          */
         //Image applicationIcon = new Image(getClass().getResourceAsStream("icon.png"));
         //primaryStage.getIcons().add(applicationIcon);
+        Image applicationIcon = new Image(getClass().getResourceAsStream("/Media/st6b.png"));
+        primaryStage.getIcons().add(applicationIcon);
 
         primaryStage.show();
     }
