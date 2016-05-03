@@ -51,6 +51,7 @@ public class GameController extends ControllerBase {
     private Thread AIThread;
 
     private int scores;
+    public int finalScores;
     private int difficulty;
     private int winTime;
     private int mobLastId = 0;
@@ -136,6 +137,8 @@ public class GameController extends ControllerBase {
         //loader.changeResolutionScreen();
         stopGame(isWin);
         loadFinishScene(isWin);
+        finalScores = scores;
+        DatabaseService.InsertPlayer(StartSceneController.name, finalScores);
     }
 
     private void stopGame(boolean isWin) {

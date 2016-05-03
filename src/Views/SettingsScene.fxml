@@ -33,17 +33,23 @@
          <input type="checkbox" value="None" id="slideThree" name="check" />
          <label for="slideThree"></label>
       </div>-->
-      <CheckBox fx:id="boxSound" onAction="#editBoxSound" layoutX="370.0" layoutY="277.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="136.0" stylesheets="@../Resources/CheckBoxStyle.css" text="Music" textFill="WHITE">
+      <CheckBox fx:id="boxSound" layoutX="370.0" layoutY="277.0" mnemonicParsing="false" onAction="#editBoxSound" prefHeight="48.0" prefWidth="136.0" stylesheets="@../Resources/CheckBoxStyle.css" text="Music" textFill="WHITE">
          <font>
             <Font name="OCR A Extended" size="18.0" />
          </font>
       </CheckBox>
       <!-- CheckBox: FullScreen-->
-      <CheckBox id="boxScreen" onAction="#editBoxScreen" layoutX="370.0" layoutY="339.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="175.0" stylesheets="@../Resources/CheckBoxStyle.css" text="FullScreen" textFill="WHITE">
+      <CheckBox id="boxScreen" layoutX="370.0" layoutY="339.0" mnemonicParsing="false" onAction="#editBoxScreen" prefHeight="48.0" prefWidth="175.0" stylesheets="@../Resources/CheckBoxStyle.css" text="FullScreen" textFill="WHITE">
          <font>
             <Font name="OCR A Extended" size="18.0" />
          </font>
       </CheckBox>
+      <TableView fx:id="profileTable" layoutX="101.0" layoutY="498.0" prefHeight="189.0" prefWidth="152.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Players" fx:id="playersColumn" />
+          <TableColumn prefWidth="75.0" text="Scores" fx:id="scoresColumn" />
+        </columns>
+      </TableView>
 
       <!-- onAction="#addPerson"/
       -->

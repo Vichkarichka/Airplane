@@ -10,24 +10,34 @@
 
 <AnchorPane id="menuBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1449.0" stylesheets="@../Resources/menuStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StartSceneController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="314.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="true" prefHeight="214.0" prefWidth="716.0" text="Airplanes" textAlignment="CENTER" textFill="#fffafa">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="314.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="true" prefHeight="214.0" prefWidth="716.0" text="Airplanes" textAlignment="CENTER" textFill="#fffafa" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="Levenim MT" size="150.0" />
          </font>
       </Label>
-      <Button fx:id="startButton" layoutX="465.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#handleStartClick" prefHeight="102.0" prefWidth="401.0" stylesheets="@../Resources/buttonStyle.css" text="Start Game" textFill="WHITE">
+      <Button fx:id="startButton" layoutX="465.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#handleStartClick" prefHeight="102.0" prefWidth="401.0" stylesheets="@../Resources/buttonStyle.css" text="Start Game" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="OCR A Extended" size="48.0" />
          </font></Button>
-      <Button fx:id="exitButton" layoutX="575.0" layoutY="495.0" mnemonicParsing="false" onMouseClicked="#handleExitClick" prefHeight="78.0" prefWidth="195.0" stylesheets="@../Resources/buttonStyle.css" text="Exit" textFill="WHITE">
+      <Button fx:id="exitButton" layoutX="575.0" layoutY="495.0" mnemonicParsing="false" onMouseClicked="#handleExitClick" prefHeight="78.0" prefWidth="195.0" stylesheets="@../Resources/buttonStyle.css" text="Exit" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="OCR A Extended" size="48.0" />
          </font>
       </Button>
-      <Button fx:id="settingsButton" layoutX="504.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#handleSesttingsClick" prefHeight="102.0" prefWidth="337.0" stylesheets="@../Resources/buttonStyle.css" text="Settings" textFill="WHITE">
+      <Button fx:id="settingsButton" layoutX="504.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#handleSesttingsClick" prefHeight="102.0" prefWidth="337.0" stylesheets="@../Resources/buttonStyle.css" text="Settings" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="OCR A Extended" size="48.0" />
          </font></Button>
+      <Label fx:id="profileLabel" alignment="CENTER" layoutX="231.0" layoutY="191.0" prefHeight="146.0" prefWidth="1000.0" textAlignment="JUSTIFY" textFill="#fcf8f8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Levenim MT" size="100.0" />
+         </font>
+      </Label>
+      <Button id="LoginButton" fx:id="profileButton" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#handleChangeProfile" stylesheets="@../Resources/buttonStyle.css" text="Log In" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font></Button>
+      <TextField fx:id="profileTextField" layoutX="643.0" layoutY="222.0" prefHeight="0.0" prefWidth="149.0" />
    </children>
    <opaqueInsets>
       <Insets />

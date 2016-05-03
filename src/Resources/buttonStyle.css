@@ -16,3 +16,6 @@
   #BackButton{
         -fx-background-color: transparent;
     }
+    #LoginButton{
+     -fx-background-color: transparent;
+    }
