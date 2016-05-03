@@ -4,3 +4,21 @@
     -fx-background-color: rgb(0, 0, 0);
     -fx-background-position: center center;
  }
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+#boxSound {
+    -fx-color: #cccccc;
+    //-fx-border-width: 0.5;
+    //-fx-border-color: #f000ff;
+    //-fx-background-color: blue;
+  }
+
+#boxScreen {
+    -fx-color: #cccccc;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    //-fx-background-image: url("map.jpg");
+  }
