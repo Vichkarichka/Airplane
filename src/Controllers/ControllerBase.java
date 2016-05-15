@@ -6,7 +6,7 @@ import javafx.event.ActionEvent;
 
 public abstract class ControllerBase {
     protected ScenesLoader loader;
-
+ protected static boolean flag_sound=true;
     public void setLoader(ScenesLoader loader) {
         this.loader = loader;
         loader.changeResolutionScreen(isFullScreen);
@@ -16,6 +16,16 @@ public abstract class ControllerBase {
     * Add CheckBoxScreen edit
     * */
     public void editBoxSound(ActionEvent event) {
+
+        if(flag_sound==true)
+        {
+            flag_sound=false;
+        }
+        else
+        {
+            flag_sound=true;
+        }
+
         System.out.println("CheckBoxSound!");
     }
     /*

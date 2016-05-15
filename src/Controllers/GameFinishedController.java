@@ -17,19 +17,24 @@ public class GameFinishedController extends ControllerBase{
 
     public void setGameFinishResult(boolean isWin) {
         if (isWin) {
+
             gameResultLabel.setText("WIN");
             gameResultLabel.setTextFill(Paint.valueOf("LIME"));
-            String path = "src/Resources/J.mp3";
-            Media sound = new Media(new File(path).toURI().toString());
-            MediaPlayer mp = new MediaPlayer(sound);
-            mp.play();
+            if(flag_sound==true) {
+                String path = "src/Resources/J.mp3";
+                Media sound = new Media(new File(path).toURI().toString());
+                MediaPlayer mp = new MediaPlayer(sound);
+                mp.play();
+            }
         } else {
             gameResultLabel.setText("LOOSE");
             gameResultLabel.setTextFill(Paint.valueOf("RED"));
-            String path = "src/Resources/GTA.mp3";
-            Media sound = new Media(new File(path).toURI().toString());
-            MediaPlayer mp = new MediaPlayer(sound);
-            mp.play();
+            if(flag_sound==true) {
+                String path = "src/Resources/GTA.mp3";
+                Media sound = new Media(new File(path).toURI().toString());
+                MediaPlayer mp = new MediaPlayer(sound);
+                mp.play();
+            }
         }
     }
 

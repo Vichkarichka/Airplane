@@ -309,12 +309,14 @@ public class GameController extends ControllerBase {
         /*
         * Add sound
         */
-        System.out.println("Go Fire");
-        String path = "src/Resources/Laser.wav";
-        Media sound = new Media(new File(path).toURI().toString());
-        MediaPlayer mp = new MediaPlayer(sound);
-        mp.play();
+        if(flag_sound) {
 
+            System.out.println("Go Fire");
+            String path = "src/Resources/Laser.wav";
+            Media sound = new Media(new File(path).toURI().toString());
+            MediaPlayer mp = new MediaPlayer(sound);
+            mp.play();
+        }
         initMovPath(startPosition, endPosition, circle, 200, bullets);
     }
 

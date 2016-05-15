@@ -18,7 +18,7 @@ public class ConnectionFactory {
             return conn;
         }catch(Exception e)//TODO: remove.
         {
-            System.exit(0);
+           // System.exit(0);
             return null;
         }
     }
